@@ -1,7 +1,9 @@
 name: deploy-dev
 on: 
   push:
-    branches: [ dev ]
+    branches: [main, dev]
+  pull_request:
+    branches: [main, dev]
 jobs:
   
   api-tests:
