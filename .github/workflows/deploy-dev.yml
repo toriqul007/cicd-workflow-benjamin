@@ -94,7 +94,7 @@ jobs:
           SSH_PORT: ${{ secrets.SSH_PORT }}          
 
       - name: copying template database to show the products
-        run: cp ./database/products-template.db ./database/products.db
+        run: ssh dev 'cd dev/ && cp ./database/products-template.db ./database/products.db'
 
       - name: Deploy from dev 
         # Here 'ssh dev' is like run command which will be the same for every branch 
